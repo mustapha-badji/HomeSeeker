@@ -1,0 +1,15 @@
+    <div [hidden]="AfficherCamera">    
+        <button id="demarrerCamera" (click)="DemarrerCamera()">Démarrer Camera</button>
+    </div>
+    <div [hidden]="ModeVideo">
+        <video #videoplayer [width]="width" [height]="height" autoplay></video>
+        <button id="snap" (click)="capturerPhoto()">Prendre photo</button>
+    </div>
+    <div [hidden]="!ModeVideo">
+        <canvas #canvas [width]="width" [height]="height"></canvas>
+        <button id="save" (click)="EnregistrerPhoto()">Enregistrer photo</button>
+    </div>
+
+    
+    <p>Longitude : {{longitude}}</p>
+    <p>Latitude : {{latitude}}</p>

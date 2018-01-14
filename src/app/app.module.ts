@@ -8,11 +8,13 @@ import { AjouterAppartementComponent } from './ajouter-appartement/ajouter-appar
 import { ListeAppartementComponent } from './liste-appartement/liste-appartement.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { CapturePhotoComponent } from './capture-photo/capture-photo.component';
 
 const appRoutes: Routes = [
   { path: 'Accueil', component: AccueilComponent },
   { path: 'Appartement', component: AjouterAppartementComponent },
-  { path: 'Appartements', component: ListeAppartementComponent}
+  { path: 'Appartements', component: ListeAppartementComponent},
+  { path: 'Capturer', component: CapturePhotoComponent}
 ];  
 
 
@@ -22,7 +24,8 @@ const appRoutes: Routes = [
     AjouterAppartementComponent,
     ListeAppartementComponent,
     AccueilComponent,
-    NavigationBarComponent
+    NavigationBarComponent,
+    CapturePhotoComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes,{ enableTracing: true }), // <-- debugging purposes only
